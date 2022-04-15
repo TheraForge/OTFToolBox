@@ -1,10 +1,14 @@
-# OTFToolBox 1.0.0-beta for iOS
+# OTFToolBox 1.0.1-beta for iOS
 
 TheraForge ToolBox (*OTFToolBox*) is an open software development kit (SDK) for rapid application development (RAD) of digital health solutions running on Apple iOS.
 
 It comprises a set of iOS frameworks for students, researchers and professional developers, designed to accelerate rapid prototyping of digital health applications.
 
 OTFToolbox includes support for persistent secure local storage with cloud synchronization and *offline-first capabilities*, digital health UI/UX components synchronized with data changes, support for powerful app templating and styling, REST API support to connect to TheraForge's secure CloudBox service, AppleWatch support, wearable device support as health data sources, and much more.
+
+## Change Log
+* Release 1.0.0-beta: First beta release of the framework
+* Release 1.0.1-beta: Removed warnings and made various other improvements in the sub-frameworks. Verified support for Xcode 13.3. Improved dependency diagram and formatting in the Readme
 
 # Table of Contents
 * [Overview](#Overview)
@@ -213,7 +217,7 @@ Once your project podfile is created, you can start adding required modules unde
 
 Open the Podfile in your favourite text editor (for example, using Xcode or TextEdit). The content of that file should look like the following text:
 
-```swift
+```ruby
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -229,12 +233,12 @@ end
 In the file, you need to add two things:
 
 1. You need to add two sources at the top to tell Cocoapods where to search for the modules to install:
-   ```swift
+   ```ruby
    source 'https://cdn.cocoapods.org'
    source 'https://github.com/Theraforge/OTFCocoapodSpecs’
    ```
 2. You also need to specify that you want to install the OTFToolBox parent framework/module like so:
-   ```swift
+   ```ruby
    pod 'OTFToolBox'
    ```
 
@@ -244,7 +248,7 @@ The latter installs all the TheraForge frameworks through a common parent framew
 
 Then, your file should look like this:
 
-```swift
+```ruby
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 source 'https://cdn.cocoapods.org'
@@ -261,7 +265,7 @@ end
 
 Head back to the `Terminal` window after saving the file and run:
 
-```
+```ruby
 pod install
 ```
 
@@ -340,7 +344,7 @@ Once an API key is received, the next step is to add it to the appropriate confi
 
 In the app code, before creating an instance of the ``TheraForgeNetwork object, you need to create a `configurations` object with the API Key assigned to you and with the TheraForge cloud server URL like so:
 
-```
+```swift
 let configurations = NetworkingLayer.Configurations(APIBaseURL: URL(string:"Cloud Server URL"), apiKey: "Your API_KEY")
 TheraForgeNetwork.configureNetwork(configurations)
 let otfNetworkService = TheraForgeNetwork.shared
@@ -457,7 +461,7 @@ To integrate [OTFToolBox/Core](#OTFToolBoxCore) with an existing workspace requi
 Add pod 'OTFToolBox/Core' under target in Podfile.
 
 
-```
+```ruby
 pod 'OTFToolBox/Core'
 ```
 
@@ -467,7 +471,7 @@ To integrate Theraforge [OTFCareKit](../../../OTFCareKit) requires the extra lin
 
 Add pod 'OTFToolBox/CareKit' under target in Podfile.
 
-```
+```ruby
 pod 'OTFToolBox/CareKit'
 ```
 
@@ -477,7 +481,7 @@ To integrate OTFCareKitUI specifically which provides the views used across the 
 
 Add pod 'OTFToolBox/CareKitUI' under target in Podfile.
 
-```
+```ruby
 pod 'OTFToolBox/CareKitUI'
 ```
 
@@ -487,7 +491,7 @@ To integrate OTFCareKitStore specifically which provides the solution for storin
 
 Add pod 'OTFToolBox/CareKitStore' under target in Podfile.
 
-```
+```ruby
 pod 'OTFToolBox/CareKitStore'
 ```
 
@@ -497,7 +501,7 @@ To integrate [OTFCloudantStore](../../../OTFCloudantStore) which is a Cloudant S
 
 Add pod 'OTFToolBox/CloudantStore' under target in Podfile.
 
-```
+```ruby
 pod 'OTFToolBox/CloudantStore'
 ```
 
@@ -507,7 +511,7 @@ To integrate [OTFCloudClientAPI](../../../OTFCloudClientAPI) which is a REST API
 
 Add pod 'OTFToolBox/API' under target in Podfile.
 
-```
+```ruby
 pod 'OTFToolBox/API'
 ```
 
@@ -552,7 +556,7 @@ A developer can use this mode when the app is guaranteed to complete a file acce
 To leverage the above protection levels (OTFProtectionLevel) in an application install [Theraforge OTFToolBox](#Installation) and then use the functions below with the OTFToolBox datastore object:
 
 
-```
+```objectivec
 /// Call encryption function with the help of datastore object in OBJECTIVE C
 # -(void)setProtectionLevel: (OTFProtectionLevel)level;'
 
@@ -561,7 +565,7 @@ To leverage the above protection levels (OTFProtectionLevel) in an application i
 ```
 
 
-```
+```swift
 /// Call encryption function with the help of datastore object in SWIFT -
 # dataStore.setProtectionLevel(.level)
 ```
