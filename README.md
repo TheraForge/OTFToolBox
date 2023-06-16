@@ -89,9 +89,10 @@ The TheraForge ToolBox SDK supports the following features:
 
 ## Prerequisites
 
-An Intel-based Mac running [macOS Catalina 10.15.4 or later](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes) or a Mac with Apple's M1 Silicon running [macOS 11 Big Sur](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes). macOS 12 Monterey and Xcode 13 are supported.
-
-If you want to learn more about iOS Development, you may want to check out the free Stanford class here: https://cs193p.sites.stanford.edu
+- macOS Catalina 10.15.4 (Intel) or macOS 11 Big Sur (Apple Silicon)
+- Xcode 13.0 or later
+- CocoaPods
+- iOS 14.0 or later
 
 ### 1. Installation Prerequisites
 
