@@ -7,8 +7,15 @@ It comprises a set of iOS frameworks for students, researchers and professional 
 OTFToolbox includes support for persistent secure local storage with cloud synchronization and *offline-first capabilities*, digital health UI/UX components synchronized with data changes, support for powerful app templating and styling, REST API support to connect to TheraForge's secure CloudBox service, AppleWatch support, wearable device support as health data sources, and much more.
 
 ## Change Log
-* Release 1.0.0-beta: First beta release of the framework
-* Release 1.0.1-beta: Removed warnings and made various other improvements in the sub-frameworks. Verified support for Xcode 13.3. Improved dependency diagram and formatting in the Readme
+* **Release 1.0.1-beta**
+    * Removed warnings and made various other improvements in the sub-frameworks
+    * Verified support for Xcode 13.3
+    * Improved dependency diagram and formatting in the Readme
+
+<details>
+  <summary>**Release 1.0.0-beta**</summary>
+  First beta release of the framework
+</details>
 
 # Table of Contents
 * [Overview](#overview)
