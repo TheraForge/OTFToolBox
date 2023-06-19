@@ -7,8 +7,15 @@ It comprises a set of iOS frameworks for students, researchers and professional 
 OTFToolbox includes support for persistent secure local storage with cloud synchronization and *offline-first capabilities*, digital health UI/UX components synchronized with data changes, support for powerful app templating and styling, REST API support to connect to TheraForge's secure CloudBox service, AppleWatch support, wearable device support as health data sources, and much more.
 
 ## Change Log
-* Release 1.0.0-beta: First beta release of the framework
-* Release 1.0.1-beta: Removed warnings and made various other improvements in the sub-frameworks. Verified support for Xcode 13.3. Improved dependency diagram and formatting in the Readme
+* **Release 1.0.1-beta**
+    * Removed warnings and made various other improvements in the sub-frameworks
+    * Verified support for Xcode 13.3
+    * Improved dependency diagram and formatting in the Readme
+
+<details>
+  <summary>Release 1.0.0-beta</summary>
+  First beta release of the framework
+</details>
 
 # Table of Contents
 * [Overview](#overview)
@@ -89,9 +96,10 @@ The TheraForge ToolBox SDK supports the following features:
 
 ## Prerequisites
 
-An Intel-based Mac running [macOS Catalina 10.15.4 or later](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes) or a Mac with Apple's M1 Silicon running [macOS 11 Big Sur](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes). macOS 12 Monterey and Xcode 13 are supported.
-
-If you want to learn more about iOS Development, you may want to check out the free Stanford class here: https://cs193p.sites.stanford.edu
+- macOS Catalina 10.15.4 (Intel) or macOS 11 Big Sur (Apple Silicon)
+- Xcode 13.0 or later
+- CocoaPods
+- iOS 14.0 or later
 
 ### 1. Installation Prerequisites
 
@@ -99,7 +107,7 @@ In order to develop iOS apps, make sure to download Xcode, Apple's Integrated De
 
 If you haven't done it yet, follow this [Xcode article](https://medium.nextlevelswift.com/install-and-configure-xcode-7ed0c5592219) to install and configure it.
 
-(Note that in case of Xcode 13.2 Apple recommends to download it directly from the Apple Developer web site https://developer.apple.com/download/all/?q=Xcode. Some developers consider this installation method *preferable for all versions of Xcode*, that is, it’s considered a best practice. However, in this case you also need to install the *Command Line Tools for Xcode*, which are a separate download.)
+(Note that in case of Xcode 13.2 Apple recommends to [download it directly from the Apple Developer web site](https://developer.apple.com/download/all/?q=Xcode). Some developers consider this installation method *preferable for all versions of Xcode*, that is, it’s considered a best practice. However, in this case you also need to install the *Command Line Tools for Xcode*, which are a separate download.)
 
 After installing the Xcode app, you will also need to install the [CocoaPods](https://cocoapods.org/) dependency manager for Swift and Objective-C Cocoa projects.
 
