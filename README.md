@@ -13,7 +13,7 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
     * Improved dependency diagram and formatting in the Readme
 
 <details>
-  <summary>**Release 1.0.0-beta**</summary>
+  <summary>Release 1.0.0-beta</summary>
   First beta release of the framework
 </details>
 
