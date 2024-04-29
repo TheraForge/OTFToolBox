@@ -32,8 +32,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
  */
  
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 import UIKit
+#endif
+
+import Foundation
 
 extension OTFFileProtection {
     func fileExistsAt(_ path: String) throws -> Bool {
@@ -60,15 +63,18 @@ extension OTFFileProtection {
 
     // MARK: - Begin background task
     func beginBackgroundTask() {
+        #if TARGET_OS_IOS
         self.backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
             self.endBackgroundTask()
         })
+        #endif
     }
 
     func endBackgroundTask() {
+        #if TARGET_OS_IOS
         if let identifier = self.backgroundTaskIdentifier {
             UIApplication.shared.endBackgroundTask(identifier)
         }
+        #endif
     }
 }
-#endif

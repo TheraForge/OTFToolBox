@@ -32,14 +32,19 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
  */
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 import UIKit
+#endif
+
+import Foundation
 
 @objc public class OTFFileProtection: NSObject {
     public static let shared: OTFFileProtectionProvider = OTFFileProtection()
     var filePath: String!
     let fileManager = FileManager.default
+    #if TARGET_OS_IOS
     var backgroundTaskIdentifier: UIBackgroundTaskIdentifier!
+    #endif
 }
 
 
@@ -99,4 +104,3 @@ extension OTFFileProtection {
         self.endBackgroundTask()
     }
 }
-#endif

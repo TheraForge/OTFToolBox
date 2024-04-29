@@ -8,6 +8,14 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
 
 ## Change Log
 <details open>
+  <summary>Release 1.0.4-beta</summary>
+  <ul>
+    <li>Added OTFDesignSystem framework as a new dependency</li>
+    <li>Added watchOS target</li>
+  </ul>
+</details>
+
+<details open>
   <summary>Release 1.0.3-beta</summary>
   <ul>
     <li>Added Watch OS support</li>
