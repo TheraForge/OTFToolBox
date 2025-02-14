@@ -4,10 +4,18 @@ TheraForge ToolBox (*OTFToolBox*) is an open software development kit (SDK) for 
 
 It comprises a set of iOS frameworks for students, researchers and professional developers, designed to accelerate rapid prototyping of digital health applications.
 
-OTFToolbox includes support for persistent secure local storage with cloud synchronization and *offline-first capabilities*, digital health UI/UX components synchronized with data changes, support for powerful app templating and styling, REST API support to connect to TheraForge's secure CloudBox service, AppleWatch support, wearable device support as health data sources, and much more.
+OTFToolbox includes support for persistent secure local storage with cloud synchronization and *offline-first capabilities*, digital health UI/UX components synchronized with data changes, support for powerful app templating and styling, REST API support to connect to TheraForge's secure CloudBox service, Apple Watch support, wearable device support as health data sources, and much more.
 
 ## Change Log
 <details open>
+  <summary>Release 1.0.5-beta</summary>
+  <ul>
+    <li>Improved Readme file</li>
+    <li>Updated company name and copyright date</li>
+  </ul>
+</details>
+
+<details>
   <summary>Release 1.0.4-beta</summary>
   <ul>
     <li>Added OTFDesignSystem framework as a new dependency</li>
@@ -15,10 +23,10 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>Release 1.0.3-beta</summary>
   <ul>
-    <li>Added Watch OS support</li>
+    <li>Added watchOS support</li>
   </ul>
 </details>
 
@@ -53,9 +61,9 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
 
 OTFToolBox is a client-side frontend SDK comprising several components:
 
-* A cloud client framework for interconnection to TheraForge’s CloudBox serverless service (BaaS): [OTFCloudClientAPI](../../../OTFCloudClientAPI)
+* A cloud client framework for interconnection to TheraForge's CloudBox, a serverless Backend as a Service (BaaS): [OTFCloudClientAPI](../../../OTFCloudClientAPI)
 * Enterprise-grade digital health frameworks: [OTFCareKit](../../../OTFCareKit), [OTFResearchKit](../../../OTFResearchKit)
-* Enterprise-grade persistent storage and synchonization frameworks: [OTFCloudantStore](../../../OTFCloudantStore), [OTFCDTDatastore](../../../OTFCDTDatastore)
+* Enterprise-grade persistent storage and synchronization frameworks: [OTFCloudantStore](../../../OTFCloudantStore), [OTFCDTDatastore](../../../OTFCDTDatastore)
 * A templating framework for app customization and styling: [OTFTemplateBox](../../../OTFTemplateBox)
 
 
@@ -126,7 +134,7 @@ In order to develop iOS apps, make sure to download Xcode, Apple's Integrated De
 
 If you haven't done it yet, follow this [Xcode article](https://medium.nextlevelswift.com/install-and-configure-xcode-7ed0c5592219) to install and configure it.
 
-(Note that in case of Xcode 13.2 Apple recommends to download it directly from the Apple Developer web site https://developer.apple.com/download/all/?q=Xcode. Some developers consider this installation method *preferable for all versions of Xcode*, that is, it’s considered a best practice. However, in this case you also need to install the *Command Line Tools for Xcode*, which are a separate download.)
+(Note that in case of Xcode 13.2 Apple recommends to download it directly from the Apple Developer web site https://developer.apple.com/download/all/?q=Xcode. Some developers consider this installation method *preferable for all versions of Xcode*, that is, it’s considered a best practice. However, in this case you also need to install the *Command Line Tools for Xcode*, which is a separate download.)
 
 After installing the Xcode app, you will also need to install the [CocoaPods](https://cocoapods.org/) dependency manager for Swift and Objective-C Cocoa projects.
 
@@ -150,7 +158,7 @@ Wait for the installation to end.
 
 ![Alt text](Docs/0-homebrew.png)
 
-OTFToolBox by default includes Apple's ResearchKit framework. Building it requires the installation of the `git-lfs` tool like so:
+By default, OTFToolBox includes Apple’s ResearchKit framework. Building it requires the installation of the `git-lfs` tool like so:
 
 ```
 brew install git-lfs
@@ -224,13 +232,13 @@ Then select **Create new project**. Name your project **MyDigitalHealthApp** as 
 
 Feel free to pick either **Storyboard** or **SwiftUI** type.
 
-Then, make sure sure to select the **Developer** folder as location for your new project.
+Then, make sure to select the **Developer** folder as location for your new project.
 
 Voilà. Xcode will create a sub-folder called *MyDigitalHealthApp* with the basic project files.
 
 ### 3. Initialize CocoaPods
 
-After creating the project, head back to the Terminal app and go to the MyDigitalHealthApp folder (type `cd MyDigitalHealthApp` where you originally created the project). After that run the `pod init` command:
+After creating the project, head back to the Terminal app and go to the MyDigitalHealthApp folder. Type cd MyDigitalHealthApp in the terminal where you originally created the project. After that run the `pod init` command:
 
 ![Alt text](Docs/3-pod_init.png)
 
@@ -300,7 +308,7 @@ Then you should see the modules getting installed like so:
 
 ![Alt text](Docs/5-pods_installed.png)
 
-After successful completion of the installation process (be patient, sometimes it make take several minutes), your folder structure should look like the one in the following image:
+After successful completion of the installation process (be patient, sometimes it may take several minutes), your folder structure should look like the one in the following image:
 
 ![Alt text](Docs/5-pod_installation.png)
 
@@ -357,7 +365,7 @@ This is the list of the input fields that are shown in the backend setup form:
 
 1. Company Developer Email Address (Required): It represents the contact information to which an API Key will be associated.
 2. Organization Source Email Address (Optional): The Organization Source Email address is the source address that will be used to send emails to users for general communications, for example, when they forget the access password to the dashboard.
-3. Organization Email Server (Optional): An Organization Email Server address is required when the backend needs to configure the mail service for sending emails to users. Here is the format for the Organisation Email Server: **mail.organisation-domain.com**.
+3. Organization Email Server (Optional): An Organization Email Server address is required when the backend needs to configure the mail service for sending emails to users. Here is the format for the Organisation Email Server: **mail.organization-domain.com**.
 4. Organization Source Email Address Password (Optional): This is the password for the source email server.
 5. Gmail Client ID (Optional): The Gmail client ID is used to enable the Sign in with Gmail functionality. The Gmail client ID is optional for the initial configuration.<br>
 6. Apple ID (Optional): Apple ID is used to enable the Sign in with Apple functionality. The Apple ID is optional for the initial configuration.
@@ -381,13 +389,13 @@ You can refer to the [OTFCloudClientAPI](../../../OTFCloudClientAPI) Readme file
 
 ## Rebuild the App Using the Cloud Registration Information <a name="Rebuild-After-Registration"></a>
 
-When you have configured your files, you can rebuild your app in Xcode by clicking the Build command in the menu bar. Now your app will be running with your organisation's API Key. You can now sign up users and login into the cloud service using user-provided credentials.
+When you have configured your files, you can rebuild your app in Xcode by clicking the Build command in the menu bar. Now your app will be running with your organization's API Key. You can now sign up users and login into the cloud service using user-provided credentials.
 
 # TheraForge Cloud Analytics Portal <a name="TheraForge-Analytics"></a>
 
 The Theraforge Cloud Analytics Portal is a dashboard in which users can review their server and clients' related statistics.
 
-Once you have configured the above parameters and have access to the cloud services, our support team will share the credentials of the analytics portal. Through these credentials you will be able to login and review the available metrics. These are the statistics that are currently available in the analytics dashboard:
+Once you have configured the above parameters and have access to the cloud services, our support team will share the credentials of the analytics portal. Through these credentials you will be able to login and review the available metrics. The following statistics are currently available in the analytics dashboard:
 
 1. Client Metrics: This section will show the stats related to your organization, i.e., number of users, care plan tasks, etc. <br>
 2. Server Metrics: This section will show the graphs related to server stats. <br>
@@ -567,7 +575,7 @@ There are different types of file protection levels natively available in iOS an
 
 Building upon Apple’s NSFileProtectionType setting, OTFToolBox provides three types of strict file protection models that help developers set a specific application behavior that minimizes the time a file encryption key is kept in memory (and is therefore potentially accessible by an intruder).
 
-These modes allow an app to run to completion or to run in the background for a predetermined amount of time before the protection level is switched to Complete mode (NSFileProtectionComplete). In this way, the app is kept in Complete protection mode for as long as possible based on the developer’s needs.
+These modes allow an app to complete its operations or to run in the background for a predetermined amount of time before the protection level is switched to Complete mode (NSFileProtectionComplete). In this way, the app is kept in Complete protection mode for as long as possible based on the developer’s needs.
 
 The goal is to not use NSFileProtectionCompleteUntilFirstUserAuthentication (AFU) state because that is problematic as described in this [article](https://www.wired.com/story/smartphone-encryption-law-enforcement-tools/).
 
@@ -591,11 +599,168 @@ To leverage the above protection levels (OTFProtectionLevel) in an application i
 # [datastore setProtectionLevel: runToCompletionWithIn10Seconds];
 ```
 
-
 ```swift
 /// Call encryption function with the help of datastore object in SWIFT -
 # dataStore.setProtectionLevel(.level)
 ```
+
+# TestFlight Auto Deployment Setup <a name="CI/CD Setup"></a>
+
+CI/CD is the combination of continuous integration (CI) and continuous delivery (CD). A CI/CD pipeline automates the process of software delivery. It builds code, runs tests, and helps you to safely deploy a new version of the software. In addition, a CI/CD pipeline reduces manual errors, provides feedback to developers, and allows fast product iterations.
+
+## GitHub Actions
+
+GitHub Actions is a CI/CD tool for a GitHub-based development workflow. You can use it to integrate and deploy code changes to an application or a platform as well as to test, track, and manage code changes.
+
+Create and integrate a workflow using GitHub Actions:
+
+* A workflow can be triggered from a pull request or a push to a specific/any branch.
+* A workflow must have at least one job.
+* A job contains a set of steps that perform individual tasks and steps that can run commands or use an action.
+
+You can configure your workflows to run when specific activity on GitHub happens, at a scheduled time, or when an event outside of GitHub occurs.
+
+Here are some [events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
+
+In order to deploy an iOS app to [TestFlight](https://developer.apple.com/testflight/) you need to complete the following steps:
+
+
+## Continuous Integration
+
+In order to automate the testing process, if missing, you need to create the directory `.github/workflows/` in the root of the repository to store the workflows. Then you create a YAML file to configure the workflow or you clone the `OTFMagicBox` and use the keyboard shortcut *“Command” + “Shift” + “.” * to see the hidden files in the MagicBox directory, copy the `.github/` folder from that and paste it to your project. The `.github/` folder contains these files:
+
+![Alt text](Docs/11-github.png)
+
+Navigate to *.github/workflows/Testing.yml* file.
+
+![Alt text](Docs/53-testing-yml.png)
+
+Open the *Testing.yml* file and specify the Xcode and CocoaPods version.
+
+![Alt text](Docs/54-xcode-version.png)
+
+## Export Certificates From Keychain
+
+Open *Keychain Access* and find the installed certificate, expand the certificate and select both certificate and private key.
+
+On right click a dialog box opens: select the export option as shown below.
+
+![Alt text](Docs/43-Export-Certificate.png)
+
+Then a dialog box opens: enter an appropriate certificate name, select the .p12 format and press *Save*.
+ 
+![Alt text](Docs/44-p12-Formate.png)
+
+Finally, enter and confirm the password required by the certificate, then press *Okay*.
+
+You can follow the steps above to create development and distribution certificates.
+
+### App Store Connect
+
+Navigate to the App Store Connect in the side bar.
+
+![Alt text](Docs/62-appstore-connect.png)
+
+You can also navigate to App Store Connect using this link [App Store Connect](https://appstoreconnect.apple.com/).
+
+Select My Apps.
+
+![Alt text](Docs/63-my-apps.png)
+
+Create a new application using the plus button.
+![Alt text](Docs/64-new-app.png)
+
+Fill in the information, in the dropdown menu select the bundle identifier that you registered in your Apple developer account and create the application.
+
+You will not able to see the application on *TestFlight* if you choose the wrong bundle identifier.
+
+![Alt text](Docs/65-add-identifier.png)
+
+## GitHub Secrets
+
+Secrets are encrypted environment variables that you create in an organization, repository, or repository environment. The secrets that you create are available to use in GitHub Actions workflows.
+
+To add each secret to your GitHub repository, you will first need to navigate to the repository’s *Settings* tab.
+
+![Alt text](Docs/66-setting-tab.png)
+
+Then select *Actions* from the sidebar.
+
+![Alt text](Docs/77-actions.png)
+
+To add one secret, click the *New repository secret* button.
+
+![Alt text](Docs/78-add-secret.png)
+
+Then enter the name of the secret and the value. Finally, click *Add secret*.
+
+![Alt text](Docs/79-secret-value.png)
+
+These are the secrets you need to store in GitHub in order for the workflow to run successfully:
+
+* The signing certificate data
+* Signing certificate password
+* The provisioning profile data
+* The App Store Connect username
+* The App Store Connect password
+* Create an app-specific password
+* ExportOptions.plist
+
+![Alt text](Docs/gitub-secrets.png)
+
+## Continuous Deployment
+
+In order to deploy an iOS app to [TestFlight](https://developer.apple.com/testflight/) you need to complete the following steps:
+
+* Create a distribution certificate and a provisioning profile for distribution to the App Store.
+* Export the certificate with the .p12 format
+* Use encrypted certificate data
+* Create secrets in your repository
+
+You need encrypted certificate data to save in your GitHub secrets, which are listed below:
+
+### SIGNING_CERTIFICATE_P12_DATA_RELEASE
+
+To generate the encrypted certificate data, you will export the certificate identity from the *Keychain Access* application. Export the .p12 files and save them.
+Next, open a *Terminal* window and find the p12 file on your computer. Run the following command using the path and filename of that file (dragging and dropping a file into Terminal automatically generates the correct file path):
+
+`cat YourCertificate.p12 | base64 | pbcopy`
+
+Paste the copied text as the value of the SIGNING_CERTIFICATE_P12_DATA parameter in the GitHub secret.
+
+### SIGNING_CERTIFICATES_PASSWORD
+
+This parameter is the password that is used while exporting the signing certificates from your Keychain Access. Make sure you save the correct password in this secret otherwise you will get the `security: SecKeychainItemImport: MAC verification failed during PKCS12 import (wrong password?)` error.
+
+### PROVISIONING_PROFILE_DATA_RELEASE
+
+You need to base64-encode the provisioning profile that you created and downloaded during the project setup and then copy it to your clipboard. Run the following command, replacing the `profile.mobileprovision` filename with the name of the provisioning profile you downloaded.
+
+`cat YourProfile.mobileprovision | base64 | pbcopy`
+
+Paste the copied text as the value of the PROVISIONING_PROFILE_DATA parameter in the secret.
+
+### APP_STORE_CONNECT_USERNAME
+
+This secret should be set to the Apple ID of your developer account.
+
+### APP_STORE_CONNECT_PASSWORD
+
+This secret should be set to an application-specific password for your Apple ID account.
+
+### Create an app-specific password ###
+Generate app-specific password by using these steps:
+
+* Sign in to https://appleid.apple.com.
+* In the Sign-In and Security section, select App-Specific Passwords.
+* Select Generate an app-specific password or select the Add button, then follow the steps on your screen.
+* Enter or paste the app-specific password into the password field of the app.
+
+### ExportOptions.plist ###
+
+This is a required configuration that you could create manually but is saved by Xcode when you archive an app. You’ve exported your iOS app archive to `~/PROJECTNAME/build`, you could copy the ExportOptions.plist and paste it to your project.
+
+![Alt text](Docs/export_option.png)
 
 # License <a name="License"></a>
 
