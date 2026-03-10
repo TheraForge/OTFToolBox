@@ -8,6 +8,13 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
 
 ## Change Log
 <details open>
+  <summary>Release 2.0.0</summary>
+  <ul>
+    <li>Updated podspec with new versions</li>
+  </ul>
+</details>
+
+<details>
   <summary>Release 1.0.5-beta</summary>
   <ul>
     <li>Improved Readme file</li>
