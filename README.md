@@ -8,6 +8,14 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
 
 ## Change Log
 <details open>
+  <summary>Release 2.5.0</summary>
+  <ul>
+    <li>Aligned OTFToolBox with OTFToolBoxCore 2.5.0, OTFCloudClientAPI 2.1.0, OTFDesignSystem 2.1.0, and OTFCloudantStore 2.1.0 for the Care and CareHealth subspecs</li>
+    <li>Released OTFToolBoxCore 2.5.0 as a compatibility and version-alignment update without source, public API, or platform-requirement changes</li>
+  </ul>
+</details>
+
+<details>
   <summary>Release 2.0.0</summary>
   <ul>
     <li>Updated podspec with new versions</li>
@@ -772,4 +780,3 @@ This is a required configuration that you could create manually but is saved by 
 # License <a name="License"></a>
 
 This project is made available under the terms of a modified BSD license. See the [LICENSE](LICENSE.md) file.
-
