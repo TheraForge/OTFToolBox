@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |s|
   s.name 		= 'OTFToolBox'
-  s.version 	= '2.0.0'
+  s.version 	= '2.5.0'
   s.summary 	= 'OTFToolBox is a parent framework for multiple other frameworks.'
   s.homepage	= 'https://github.com/TheraForge/OTFToolBox'
   s.license 	= { :type => 'BSD-4', :file => 'LICENSE.md' }
@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
   s.platform	= :ios
   s.ios.deployment_target = '16.0'
 	
-  s.dependency 'OTFToolBoxCore', '2.0.0'
-  s.dependency 'OTFCloudClientAPI', '2.0.0'
-  s.ios.dependency 'OTFDesignSystem', '2.0.0'
+  s.dependency 'OTFToolBoxCore', '2.5.0'
+  s.dependency 'OTFCloudClientAPI', '2.1.0'
+  s.ios.dependency 'OTFDesignSystem', '2.1.0'
   s.ios.dependency 'OTFTemplateBox', '2.0.0'
   s.default_subspec = 'Care'
 
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     ss.pod_target_xcconfig = {
 	    'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => '$(inherited)'
 	  }
-	  ss.dependency 'OTFCloudantStore/CloudantCare', '2.0.0'
+	  ss.dependency 'OTFCloudantStore/CloudantCare', '2.1.0'
 	  ss.dependency 'OTFCareKit/Care', '2.0.2-tf.2'
     ss.dependency 'OTFResearchKit', '2.0.0-tf.2'
   end
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
 	  ss.pod_target_xcconfig = {
 	    'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => '$(inherited)'
 	  }
-	  ss.dependency 'OTFCloudantStore/CloudantCareHealth', '2.0.0'
+	  ss.dependency 'OTFCloudantStore/CloudantCareHealth', '2.1.0'
 	  ss.dependency 'OTFCareKit/CareHealth', '2.0.2-tf.2'
     ss.dependency 'OTFResearchKit', '2.0.0-tf.2'
   end

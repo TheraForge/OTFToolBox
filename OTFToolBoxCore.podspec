@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OTFToolBoxCore'
-  s.version          = '2.0.0'
+  s.version          = '2.5.0'
   s.summary          = 'OTFToolBoxCore provides different types of file protection levels.'
   s.homepage         = 'https://github.com/TheraForge/OTFToolBox'
   s.license          = { :type => 'BSD-4', :file => 'LICENSE.md' }
