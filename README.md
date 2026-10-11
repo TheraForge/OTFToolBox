@@ -61,18 +61,18 @@ OTFToolbox includes support for persistent secure local storage with cloud synch
 
 
 # Table of Contents
-* [Overview](#Overview)
-* [Features](#Features)
-* [Installation](#Installation)
-* [Cloud Setup](#Cloud-Setup)
-* [Cloud Analytics Portal](#TheraForge-Analytics)
-* [No-code App Customization](#Customization)
-* [OTFToolbox Subspecs](#OTFToolbox-Subspecs)
-* [OTFToolBox Dependency Diagram](#Dependency)
-* [OTFToolBox File Protection](#FileProtection)
-* [License](#License)
+* [Overview](#overview)
+* [Features](#toolbox-features)
+* [Installation](#installation)
+* [TheraForge Cloud Setup](#theraforge-cloud-setup)
+* [TheraForge Cloud Analytics Portal](#theraforge-cloud-analytics-portal)
+* [No-code App Customization](#no-code-app-customization)
+* [OTFToolbox Subspecs](#otftoolbox-subspecs)
+* [OTFToolBox Dependency Diagram](#otftoolbox-dependency-diagram)
+* [OTFToolBox File Protection](#otftoolbox-file-protection)
+* [License](#license)
 
-# Overview <a name="Overview"></a>
+# Overview
 
 OTFToolBox is a client-side frontend SDK comprising several components:
 
@@ -92,7 +92,7 @@ The setup process of ToolBox and of a CloudBox account is described in the secti
 
 For more information on the TheraForge SDK and cloud services, you can send an email to info@hippocratestech.com .
 
-# ToolBox Features <a name="Features"></a>
+# ToolBox Features
 
 The TheraForge ToolBox SDK supports the following features:
 
@@ -132,12 +132,12 @@ The TheraForge ToolBox SDK supports the following features:
   * SonarQube-based code security analysis
 * Cocoapods support
 
-# Installation <a name="Installation"></a>
+# Installation
 
 * [Prerequisites](#Prerequisites)
 * [Project Setup](#Project-Setup)
 
-## Prerequisites <a name="Prerequisites"></a>
+## Prerequisites
 
 An Intel-based Mac running [macOS Catalina 10.15.4 or later](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes) or a Mac with Apple's M1 Silicon running [macOS 11 Big Sur](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes). macOS 12 Monterey and Xcode 13 are supported.
 
@@ -193,7 +193,7 @@ Refer to our [Cocoapods Installation](Docs/Cocoapods.md) page for prerequisites,
 
 After successful installation of `git-lfs` and Cocoapods, you can start creating your Xcode project.
 
-## Project Setup <a name="Project-Setup"></a>
+## Project Setup
 
 ### 2. Create an Xcode project
 
@@ -349,14 +349,14 @@ Now you are ready to rock!
 If you wish to integrate specific TheraForge frameworks then please check the [OTFToolbox subspecs](#OTFToolbox-subspecs) for more detailed installation information.
 
 
-# TheraForge Cloud Setup <a name="Cloud-Setup"></a>
+# TheraForge Cloud Setup
 
 The TheraForge Secure Cloud service is a shared hosting BaaS that provides cloud connectivity and synchronization to apps (and much more).
 In order to use it in their apps, clients need to register an account with the minimal information that is required by the backend services.
 
 We divided the registration process in two parts: the first one is the <b>Client Registration</b> and the second one is the <b>API Key Registration</b>.
 
-## Client Registration <a name="Client-Registration"></a>
+## Client Registration
 
 To sign up for the TheraForge Secure Cloud service, use the TheraForge Client Registration form available here: 
 [Client-Registration-Form](https://docs.google.com/forms/d/e/1FAIpQLSfYDEx-Cnja_YE6iUFs08pxxLThlV76TAJ2uB7ymuUXbky9iA/viewform).
@@ -372,7 +372,7 @@ The Client Registration form requires some basic information about the client's 
 
 Once you submit the form, our *support team* will review the information provided and then they will guide you on the subsequent steps to complete the API key registration process.
 
-## API Key Registration and Backend Configuration Information <a name="Key-Registration"></a>
+## API Key Registration and Backend Configuration Information
 
 After successful submission of the *Client Registration* form, you will be contacted to go through the API key registration process via a setup form.
 
@@ -388,7 +388,7 @@ This is the list of the input fields that are shown in the backend setup form:
 
 Once you submit this setup form, our development team will review the information. Once the information is configured, then our support team will share the API key with you and will support you through any further steps to complete the backend configuration process.
 
-## Using the Cloud Registration Information <a name="Using-Registration"></a>
+## Using the Cloud Registration Information
 
 Once an API key is received, the next step is to add it to the appropriate configuration file that is used by the OTFCloudClientAPI framework to establish the communication with the cloud backend.
 
@@ -402,11 +402,11 @@ let otfNetworkService = TheraForgeNetwork.shared
 
 You can refer to the [OTFCloudClientAPI](../../../OTFCloudClientAPI) Readme file and review the documentation in which the configuration and other steps are discussed in detail.
 
-## Rebuild the App Using the Cloud Registration Information <a name="Rebuild-After-Registration"></a>
+## Rebuild the App Using the Cloud Registration Information
 
 When you have configured your files, you can rebuild your app in Xcode by clicking the Build command in the menu bar. Now your app will be running with your organization's API Key. You can now sign up users and login into the cloud service using user-provided credentials.
 
-# TheraForge Cloud Analytics Portal <a name="TheraForge-Analytics"></a>
+# TheraForge Cloud Analytics Portal
 
 The Theraforge Cloud Analytics Portal is a dashboard in which users can review their server and clients' related statistics.
 
@@ -418,7 +418,7 @@ Once you have configured the above parameters and have access to the cloud servi
 
 ![Alt text](Docs/client-grafana-1.png) ![Alt text](Docs/client-grafana-2.png)
 
-# No-code App Customization <a name="Customization"></a>
+# No-code App Customization
 
 ![Alt text](Docs/9-onboarding.png) ![Alt text](Docs/10-onboarding-restyled.png)
 
@@ -500,7 +500,7 @@ The values for these elements in the file will build the consent process. At lea
 
 # Additional Information for Developers
 
-## OTFToolbox Subspecs <a name="OTFToolbox-Subspecs"></a>
+## OTFToolbox Subspecs
 
 OTFToolBox is the parent framework of Theraforge that includes the sub-frameworks as listed in the [Overview](#Overview).
 
@@ -568,7 +568,7 @@ pod 'OTFToolBox/API'
 After installing the required podspec for your application you can import the integrated modules and use them in your project.
 
 
-# OTFToolBox Dependency Diagram <a name="Dependency"></a>
+# OTFToolBox Dependency Diagram
 
 The diagram below depicts OTFToolBox and its sub-framework dependencies:
 
@@ -576,7 +576,7 @@ The diagram below depicts OTFToolBox and its sub-framework dependencies:
 
 You can also find this dependency diagram at this URL: https://docs.google.com/presentation/d/1bkPBcdUJPp1PTgaGosdCjDRqsEy3xlns4aV9RpjvlIk/edit?usp=sharing
 
-# OTFToolBox File Protection <a name="FileProtection"></a>
+# OTFToolBox File Protection
 
 There are different types of file protection levels natively available in iOS and categorised by the NSFileProtectionType key:
 
@@ -619,7 +619,7 @@ To leverage the above protection levels (OTFProtectionLevel) in an application i
 # dataStore.setProtectionLevel(.level)
 ```
 
-# TestFlight Auto Deployment Setup <a name="CI/CD Setup"></a>
+# TestFlight Auto Deployment Setup
 
 CI/CD is the combination of continuous integration (CI) and continuous delivery (CD). A CI/CD pipeline automates the process of software delivery. It builds code, runs tests, and helps you to safely deploy a new version of the software. In addition, a CI/CD pipeline reduces manual errors, provides feedback to developers, and allows fast product iterations.
 
@@ -777,6 +777,6 @@ This is a required configuration that you could create manually but is saved by 
 
 ![Alt text](Docs/export_option.png)
 
-# License <a name="License"></a>
+# License
 
 This project is made available under the terms of a modified BSD license. See the [LICENSE](LICENSE.md) file.
